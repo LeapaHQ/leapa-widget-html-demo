@@ -1,0 +1,10 @@
+.container {
+  width: 400px;
+  max-width: 100%;
+  margin: 50px auto;
+}
+
+leapa-customer {
+  --leapa-color-brand: #14b8a6;
+  --leapa-color-text: #1e293b;
+}

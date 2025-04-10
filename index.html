@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Leapa Customer Widget</title>
+    <link rel="stylesheet" href="https://widgets.leapa.co/customer.css" />
+    <script type="module" src="https://widgets.leapa.co/customer.js"></script>
+
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <leapa-customer
+        id="leapa"
+        source-type="card"
+        mode="charge"
+        currency="USD"
+        amount="100"
+        first-name="true"
+        last-name="true"
+        tos="true"
+        description="Test description"
+        badge="light"
+        api-key="eyJhbGciOiJIUzUxMiJ9.eyJtb2RlIjoidGVzdCIsImRlZmF1bHRBY2NvdW50QmFsYW5jZUlkIjoiYTE4YzlhMGRjOTNhNGZkOTljMjhlMDk0NWE2MDc4ZTYiLCJtZXJjaGFudENvdW50cnlDb2RlIjoiQkkiLCJtZXJjaGFudElkIjoiODRlMzA4Yzk3MDAwNGEzZTgyNzVhMDNiZDQxZmRjNDAiLCJpc01lcmNoYW50UmVwIjp0cnVlLCJyb2xlcyI6WyJST0xFX2FkbWluIl0sInRva2VuVHlwZSI6IkFQSSIsInVzZXJJZCI6IjAzMTA5NWRlMjA4NjQwOWJiZWFlZjU4NjRjZTUyMjhjIiwiYXVkaXRUcmFpbElkIjoiMTJFMTVEQkE3NUE0NEFGNEFBQjdEOUUwNkIwMTAxN0UiLCJzdWIiOiJ0cmVzb3IraG9zcGl0YWxpdHlAbGVhcGEuY28iLCJpYXQiOjE3MzA4OTUzNTR9.QI097CGpVCqJySo8i1UTeAlMBTUHBcyC1CHZbg_ipjoyo3Q0BU5-K4tds-XePGhNLycFSuAgH1Lpsc2uUVJIqQLeap@Api$9"
+      >
+      </leapa-customer>
+    </div>
+
+    <script>
+      const leapa = document.querySelector('#leapa');
+
+      leapa.addEventListener('onSuccess', (e) => {
+        console.log(e);
+      });
+
+      leapa.addEventListener('onFailure', (e) => {
+        console.error(e);
+      });
+    </script>
+  </body>
+</html>
